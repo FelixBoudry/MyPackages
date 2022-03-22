@@ -1,11 +1,11 @@
-Package: BasicR
+Package: ImportPerso
 Type: Package
 Title: What the Package Does (Title Case)
 Version: 0.1.0
-Author: Félix Boudry
-Maintainer: The package maintainer <felix.boudry@laposte.net>
+Author: Who wrote it
+Maintainer: The package maintainer <yourself@somewhere.net>
 Description: More about what it does (maybe more than one line)
     Use four spaces when indenting paragraphs within the Description.
-License:
+License: What license is it under?
 Encoding: UTF-8
 LazyData: true
