@@ -54,14 +54,12 @@ import.csv.sep <-
 
 import.xlsx.sep <-
   function(path_to_data,
-           file_type = "*.xlsx",
            rows_to_import = "all",
            columns_to_import = "all") {
     csvFileList <-
       list.files(path = path_to_data,
-                 pattern = file_type,
                  full.names = TRUE)
-    dataTables <- lapply(csvFileList, read_excel, na.strings = c("", " ", "NA", "Na", "na"))
+    dataTables <- lapply(csvFileList, read_excel)
     if (rows_to_import == "all" && columns_to_import == "all") {
       for (i in 1:length(csvFileList)) {
         dataTables[[i]] <- dataTables[[i]][]
