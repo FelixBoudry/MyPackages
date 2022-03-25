@@ -1,25 +1,26 @@
-#' Retrieve max value of each col in a data frame list
+#' Retrieve max value for specified columns in a data frame list
 #'
-#' @param data_frame_list List containing the dataframes to analyse.
-#' @param cols_to_compute Vector with the columns to analyse.
+#' @param dataFrameList List containing the dataframes to analyse.
+#' @param colsToCompute Vector with the columns to analyse.
 #'
 #' @return Returns a dataframe with the columns name and their maximum for each
 #' dataframe in the specified list.
 #' @export
 #'
 #' @examples
-get.DFL.cols.max <- function(data_frame_list, cols_to_compute) {
-  maxs <- NULL
-  for (col in cols_to_compute) {
+#' getDFLColsMax("./Datas/", c("Time", "Distance"))
+#' getDFLColsMax("~/Storage/Datas/", myDataframeList)
+#'
+getDFLColsMax <- function(dataFrameList, colsToCompute) {
+  results <- NULL
+  for (col in colsToCompute) {
     colMaxs <- NULL
-    for (df in data_frame_list) {
-      df[df == ""] <- NA
-      df[df == " "] <- NA
+    for (df in dataFrameList) {
       colMaxs <-
         rbind(colMaxs, max(as.numeric(df[complete.cases(df[, col]), col])))
     }
-    maxs <- cbind(maxs, colMaxs)
+    results <- cbind(results, colMaxs)
   }
-  colnames(maxs) <- as.list(cols_to_compute)
-  return(as.data.frame(maxs))
+  colnames(results) <- as.list(colsToCompute)
+  return(as.data.frame(results))
 }

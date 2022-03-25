@@ -14,7 +14,7 @@ importCsvFolder <-
            columns_to_import = "all") {
     csvFileList <-
       list.files(path = path_to_data,
-                 pattern = "*.csv",
+                 pattern = ".*.csv",
                  full.names = TRUE)
     dataTables <- lapply(csvFileList, read.csv, na.strings = c("", " ", "NA", "Na", "na"))
     if (rows_to_import == "all" && columns_to_import == "all") {
