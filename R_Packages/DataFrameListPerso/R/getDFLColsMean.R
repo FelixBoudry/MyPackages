@@ -1,4 +1,13 @@
-get.DFL.cols.mean <- function(data_frame_list, cols_to_compute) {
+#' getDFLColsMean
+#'
+#' @param data_frame_list A list containing the data frames to analyse.
+#' @param cols_to_compute A vector with the columns to analyse.
+#'
+#' @return
+#' @export
+#'
+#' @examples
+getDFLColsMean <- function(data_frame_list, cols_to_compute) {
   means <- NULL
   for (col in cols_to_compute) {
     colMeans <- NULL
