@@ -1,18 +1,27 @@
-get.DFL.rows.mean.rel <-
-  function(data_frame_list, cols_to_compute) {
-    meanDF <- data.frame()[60, 0]
-    for (col in cols_to_compute) {
-      colVals <- data.frame()
-      for (rowNB in 1:60) {
-        vals <- NULL
-        for (df in data_frame_list) {
-          vals <- c(vals, ((df[rowNB, col] / max(df[, col])) * 100))
-        }
-        meanVal <- mean(vals, na.rm = T)
-        colVals <- rbind(colVals, meanVal)
+#' Title
+#'
+#' @param dataFrameList
+#' @param colsToCompute
+#'
+#' @return
+#' @export
+#'
+#' @examples
+#'
+getDFLRowsMeanRel <- function(dataFrameList, colsToCompute) {
+  meanDF <- data.frame()[60, 0]
+  for (col in colsToCompute) {
+    colVals <- data.frame()
+    for (rowNB in 1:60) {
+      vals <- NULL
+      for (df in dataFrameList) {
+        vals <- c(vals, ((df[rowNB, col] / max(df[, col])) * 100))
       }
-      meanDF <- cbind(meanDF, colVals, row.names = NULL)
+      meanVal <- mean(vals, na.rm = T)
+      colVals <- rbind(colVals, meanVal)
     }
-    colnames(meanDF) <- as.list(cols_to_compute)
-    return(meanDF)
+    meanDF <- cbind(meanDF, colVals, row.names = NULL)
   }
+  colnames(meanDF) <- as.list(colsToCompute)
+  return(meanDF)
+}

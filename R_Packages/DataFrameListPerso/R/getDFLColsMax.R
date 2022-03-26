@@ -1,4 +1,4 @@
-#' Retrieve max value for specified columns in a data frame list
+#' Retrieve max value for specified columns in a data frame list.
 #'
 #' @param dataFrameList List containing the dataframes to analyse.
 #' @param colsToCompute Vector with the columns to analyse.
@@ -8,8 +8,8 @@
 #' @export
 #'
 #' @examples
-#' getDFLColsMax("./Datas/", c("Time", "Distance"))
-#' getDFLColsMax("~/Storage/Datas/", myDataframeList)
+#' getDFLColsMax(myList, c("Time", "Distance"))
+#' getDFLColsMax(myList, columnsList)
 #'
 getDFLColsMax <- function(dataFrameList, colsToCompute) {
   results <- NULL
