@@ -11,7 +11,7 @@
 #' getDFLColsSum(myList, c("Time", "Distance"))
 #' getDFLColsSum(myList, columnsList)
 #'
-get.DFL.cols.sum <- function(dataFrameList, colsToCompute) {
+getDFLColsSum <- function(dataFrameList, colsToCompute) {
   means <- NULL
   for (col in colsToCompute) {
     colMeans <- NULL

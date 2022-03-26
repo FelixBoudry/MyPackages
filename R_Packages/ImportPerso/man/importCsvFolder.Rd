@@ -4,22 +4,22 @@
 \alias{importCsvFolder}
 \title{Import all csv files of specific folders to a list of data frames}
 \usage{
-importCsvFolder(
-  path_to_data,
-  rows_to_import = "all",
-  columns_to_import = "all"
-)
+importCsvFolder(dataPath, rowsToImport = "all", colsToImport = "all")
 }
 \arguments{
-\item{path_to_data}{Location of the folder containing the data}
+\item{dataPath}{Location of the folder containing the data}
 
-\item{rows_to_import}{First row to import (default = "all").}
+\item{rowsToImport}{First row to import (default = "all").}
 
-\item{columns_to_import}{First column to import (default = "all").}
+\item{colsToImport}{First column to import (default = "all").}
 }
 \value{
 Return a list of dataframes containing the informations from the first row and column to the end of the files.
 }
 \description{
 Import all csv files of specific folders to a list of data frames
+}
+\examples{
+importCsvFolder("./datas/myFolder/")
+
 }
