@@ -1,11 +1,12 @@
-#' Title
+#' Find data from HIE athletes.
 #'
-#' @param folderToScan
+#' @param folderToScan Path for the folder containing the datas.
 #'
 #' @return Two dataframes listing the files for HIE and not HIE athletes and their oxygen saturation difference (SaO2)
 #' @export
 #'
 #' @examples
+#' listHIE("./datas/myFolder/)
 #'
 listHIE <- function(folderToScan) {
   myFolderFiles <- list.files(folderToScan)
