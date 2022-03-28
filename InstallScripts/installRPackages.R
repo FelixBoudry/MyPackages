@@ -1,6 +1,6 @@
 # Script installing personal packages from github.
 
-if (require(!devtools)) {
+if (!require(devtools)) {
   install.packages("devtools")
   library(devtools)
 }
