@@ -6,17 +6,12 @@ if (!require(devtools)) {
 }
 
 install_github("FelixBoudry/MyPackages",
-               subdir = "R_Packages/DataFrameListPerso",
-               auth_token = "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")
+               subdir = "R_Packages/DataFrameListPerso")
 install_github("FelixBoudry/MyPackages",
-               subdir = "R_Packages/DataFramePerso",
-               auth_token = "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")
+               subdir = "R_Packages/DataFramePerso")
 install_github("FelixBoudry/MyPackages",
-               subdir = "R_Packages/ImportPerso",
-               auth_token = "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")
+               subdir = "R_Packages/ImportPerso")
 install_github("FelixBoudry/MyPackages",
-               subdir = "R_Packages/PhysioFunctions",
-               auth_token = "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")
+               subdir = "R_Packages/PhysioFunctions")
 install_github("FelixBoudry/MyPackages",
-               subdir = "R_Packages/TimePerso",
-               auth_token = "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")
+               subdir = "R_Packages/TimePerso")
