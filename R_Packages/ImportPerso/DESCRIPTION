@@ -5,7 +5,9 @@ Version: 0.1.1
 Author: Félix Boudry
 Maintainer: <felix.boudry@laposte.net>
 Description: Several functions that import multiple files (csv, xlsx, etc.) from
-    a specified folder and add them in a list of dataframes.
+  a specified folder and add them in a list of dataframes.
+Imports:
+  janito
 License: GPL-3.0-only
 Encoding: UTF-8
 LazyData: true

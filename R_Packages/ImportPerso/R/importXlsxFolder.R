@@ -25,25 +25,29 @@ importXlsxSep <-
     dataTables <- lapply(csvFileList, read_excel, ...)
     if (rowsToImport == "all" && colsToImport == "all") {
       for (i in 1:length(csvFileList)) {
-        dataTables[[i]] <- dataTables[[i]][]
+        dataTables[[i]] <- dataTables[[i]][] %>%
+          clean_names()
       }
     }
     else if (rowsToImport == "all" &&
              colsToImport != "all") {
       for (i in 1:length(csvFileList)) {
-        dataTables[[i]] <- dataTables[[i]][, colsToImport]
+        dataTables[[i]] <- dataTables[[i]][, colsToImport] %>%
+          clean_names()
       }
     }
     else if (rowsToImport != "all" &&
              colsToImport == "all") {
       for (i in 1:length(csvFileList)) {
-        dataTables[[i]] <- dataTables[[i]][rowsToImport,]
+        dataTables[[i]] <- dataTables[[i]][rowsToImport,] %>%
+          clean_names()
       }
     }
     else {
       for (i in 1:length(csvFileList)) {
         dataTables[[i]] <-
-          dataTables[[i]][rowsToImport, colsToImport]
+          dataTables[[i]][rowsToImport, colsToImport] %>%
+          clean_names()
       }
     }
     names(dataTables) <-
