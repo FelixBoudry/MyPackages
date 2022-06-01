@@ -3,7 +3,7 @@ Type: Package
 Title: Manage dataframe lists
 Version: 0.1.1
 Author: Félix Boudry
-Maintainer: felix.boudry@laposte.net
+Maintainer: <felix.boudry@laposte.net>
 Description: Package used to analyse lists of dataframes avoinding repeated
     actions on separated dataframes.
 License: GPL-3.0-only
