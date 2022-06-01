@@ -1,35 +1,45 @@
-# Import all csv files of specific folders to a list of data frames
+#' Import all csv files of specific folders to a list of data frames
+#'
+#' @param dataPath Location of the folder containing the data
+#' @param rowsToImport First row to import (default = "all").
+#' @param colsToImport First column to import (default = "all").
+#'
+#' @return Return a list of dataframes containing the informations from the first row and column to the end of the files.
+#' @export
+#'
+#' @examples
+#' importCsvFolder("./datas/myFolder/")
+#'
 importCsvFolder <-
-  function(path_to_data,
-           file_type = "*.csv",
-           rows_to_import = "all",
-           columns_to_import = "all") {
+  function(dataPath,
+           rowsToImport = "all",
+           colsToImport = "all") {
     csvFileList <-
-      list.files(path = path_to_data,
-                 pattern = file_type,
+      list.files(path = dataPath,
+                 pattern = ".*.csv",
                  full.names = TRUE)
     dataTables <- lapply(csvFileList, read.csv, na.strings = c("", " ", "NA", "Na", "na"))
-    if (rows_to_import == "all" && columns_to_import == "all") {
+    if (rowsToImport == "all" && colsToImport == "all") {
       for (i in 1:length(csvFileList)) {
         dataTables[[i]] <- dataTables[[i]][]
       }
     }
-    else if (rows_to_import == "all" &&
-             columns_to_import != "all") {
+    else if (rowsToImport == "all" &&
+             colsToImport != "all") {
       for (i in 1:length(csvFileList)) {
-        dataTables[[i]] <- dataTables[[i]][, columns_to_import]
+        dataTables[[i]] <- dataTables[[i]][, colsToImport]
       }
     }
-    else if (rows_to_import != "all" &&
-             columns_to_import == "all") {
+    else if (rowsToImport != "all" &&
+             colsToImport == "all") {
       for (i in 1:length(csvFileList)) {
-        dataTables[[i]] <- dataTables[[i]][rows_to_import,]
+        dataTables[[i]] <- dataTables[[i]][rowsToImport,]
       }
     }
     else {
       for (i in 1:length(csvFileList)) {
         dataTables[[i]] <-
-          dataTables[[i]][rows_to_import, columns_to_import]
+          dataTables[[i]][rowsToImport, colsToImport]
       }
     }
     names(dataTables) <-

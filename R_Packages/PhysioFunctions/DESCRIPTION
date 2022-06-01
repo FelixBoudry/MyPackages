@@ -1,11 +1,12 @@
 Package: PhysioFunctions
 Type: Package
-Title: What the Package Does (Title Case)
-Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Title: Functions for physiological data
+Version: 0.1.1
+Author: Félix Boudry
+Maintainer: felix.boudry@laposte.net
+Description: This package was created and include functions that can be used to
+    analyse physiological data like those that you can obtain in sport sciences.
+License: GPL-3.0-only
 Encoding: UTF-8
 LazyData: true
+RoxygenNote: 7.1.2

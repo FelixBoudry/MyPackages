@@ -1,13 +1,22 @@
-get.DF.rows.mean <- function(data_frame, vals_to_compute) {
+#' Calculate the mean values for specified rows
+#'
+#' @param dataFrame The dataframe to analyse.
+#' @param valsToCompute The values to analyse in that dataframe.
+#'
+#' @return
+#' @export
+#'
+#' @examples
+#' getDFRowsMean(myDataFrame, c("height", "weight"))
+#'
+getDFRowsMean <- function(dataFrame, valsToCompute) {
   tmpDF <- NULL
   rowMeansDF <- NULL
-  data_frame[data_frame == ""] <- NA
-  data_frame[data_frame == " "] <- NA
-  for (val in vals_to_compute) {
-    tmpDF <- select(data_frame, contains(val))
+  for (val in valsToCompute) {
+    tmpDF <- select(dataFrame, contains(val))
     tmpDF <- rowMeans(tmpDF, na.rm = T)
     rowMeansDF <- cbind(rowMeansDF, tmpDF)
   }
-  colnames(rowMeansDF) <- as.list(vals_to_compute)
+  colnames(rowMeansDF) <- as.list(valsToCompute)
   return(as.data.frame(rowMeansDF))
 }
