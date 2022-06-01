@@ -12,8 +12,6 @@ listHIE <- function(folderToScan) {
   myFolderFiles <- list.files(folderToScan)
   assign(paste0("athleteHIE",folderToScan), data.frame(name = c("file names"), deltaSaO2 = c("deltas")))
   assign(paste0("athletenHIE",folderToScan), data.frame(name = c("file names"), deltaSaO2 = c("deltas")))
-
-
   for (myFile in myFolderFiles) {
     workFile <- read_excel(paste0(folderToScan, myFile))
     maxSaO2 <- max(workFile[["SaO2"]], na.rm = TRUE)

@@ -5,8 +5,8 @@ Version: 0.1.0
 Author: Félix Boudry
 Maintainer: felix.boudry@laposte.net
 Description: This packages containe different functions that permit listing and
-sorting of your data. It also includes functions that retrieve informations
-your data and put them in dataframes.
+  sorting of your data. It also includes functions that retrieve informations
+  your data and put them in dataframes.
 License: GPL-3.0-only
 Encoding: UTF-8
 LazyData: true
