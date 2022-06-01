@@ -13,7 +13,8 @@
 importXlsxSep <-
   function(dataPath,
            rowsToImport = "all",
-           colsToImport = "all") {
+           colsToImport = "all",
+           ...) {
     if (!require(readxl)) {
       install.packages("readxl");
       library(readxl)
@@ -21,7 +22,7 @@ importXlsxSep <-
     csvFileList <-
       list.files(path = dataPath,
                  full.names = TRUE)
-    dataTables <- lapply(csvFileList, read_excel)
+    dataTables <- lapply(csvFileList, read_excel, ...)
     if (rowsToImport == "all" && colsToImport == "all") {
       for (i in 1:length(csvFileList)) {
         dataTables[[i]] <- dataTables[[i]][]
