@@ -1,8 +1,7 @@
----
 title: MyPackages
 author: "Félix Boudry"
 date: "3/31/2022"
----
+
 
 # MyPackages
 
@@ -14,11 +13,9 @@ installed using the install scripts.
 ## R
 
 You should install the package you want using the following command:
-install_github(repo = "FelixBoudry/MyPackages", subdir =
-"R_Packages/packageName", auth_token = "personnalAccessToken")
-
-The needed (if the repo is private) token can be found at:
-"<https://github.com/settings/tokens>".
+devtools::install_github(repo = "FelixBoudry/MyPackages",
+                         ref = "branch",
+                         subdir = "R_Packages/package_name")
 
 Installation scripts are available in the InstallScripts folder.
 
@@ -41,6 +38,10 @@ Functions that allow importing multiple files (csv, xlsx, etc.) from folders.
 ### PhysioFunctions
 
 Specifics functions used to analyse physiological data.
+
+### SortPerso
+
+Used to find data and informations about subjects.
 
 ### Times perso
 

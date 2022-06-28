@@ -5,13 +5,13 @@ if (!require(devtools)) {
   library(devtools)
 }
 
-install_github("FelixBoudry/MyPackages",
-               subdir = "R_Packages/DataFrameListPerso")
-install_github("FelixBoudry/MyPackages",
-               subdir = "R_Packages/DataFramePerso")
-install_github("FelixBoudry/MyPackages",
-               subdir = "R_Packages/ImportPerso")
-install_github("FelixBoudry/MyPackages",
-               subdir = "R_Packages/PhysioFunctions")
-install_github("FelixBoudry/MyPackages",
-               subdir = "R_Packages/TimePerso")
+devtools::install_github(repo = "FelixBoudry/MyPackages",
+                         subdir = "R_Packages/DataFrameListPerso")
+devtools::install_github(repo = "FelixBoudry/MyPackages",
+                         subdir = "R_Packages/DataFramePerso")
+devtools::install_github(repo = "FelixBoudry/MyPackages",
+                         subdir = "R_Packages/ImportPerso")
+devtools::install_github(repo = "FelixBoudry/MyPackages",
+                         subdir = "R_Packages/PhysioFunctions")
+devtools::install_github(repo = "FelixBoudry/MyPackages",
+                         subdir = "R_Packages/TimePerso")
