@@ -31,7 +31,7 @@ Functions used to manipulate or repeat actions on dataframes stored in lists.
 
 Functions used to manipulate dataframes
 
-### ImportPerso
+### ImportR
 
 Functions that allow importing multiple files (csv, xlsx, etc.) from folders.
 
