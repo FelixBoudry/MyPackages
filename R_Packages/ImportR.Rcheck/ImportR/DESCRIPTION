@@ -1,0 +1,23 @@
+Package: ImportR
+Type: Package
+Title: Import multiple files
+Version: 0.1.1
+Author: Félix Boudry
+Maintainer: <felix.boudry@laposte.net>
+Description: Several functions that import multiple files (csv, xlsx, etc.) from
+  a specified folder and add them in a list of dataframes.
+License: GPL-3
+URL:
+        https://github.com/FelixBoudry/MyPackages/tree/main/R_Packages/ImportR
+BugRepors: https://github.com/FelixBoudry/MyPackages/issues
+Depends: R (>= 4.2.0)
+Imports: utils (>= 4.2.0), janitor (>= 2.1.0), readxl (>= 1.4.0)
+Suggests: knitr, rmarkdown, testthat (>= 3.0.0)
+VignetteBuilder: knitr
+Encoding: UTF-8
+Language: en-US
+RoxygenNote: 7.2.0
+Config/testthat/edition: 3
+NeedsCompilation: no
+Packaged: 2022-07-08 12:45:57 UTC; felix
+Built: R 4.2.0; ; 2022-07-08 12:46:11 UTC; windows
