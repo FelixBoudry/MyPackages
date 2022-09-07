@@ -19,13 +19,14 @@
 import_csv_folder <-
   function(data_path,
            rows_to_import = "all",
-           cols_to_import = "all") {
+           cols_to_import = "all",
+           ...) {
     csv_file_list <-
       list.files(path = data_path,
                  pattern = ".*.csv",
                  full.names = TRUE)
     data_tables <-
-      lapply(csv_file_list, read.csv, na.strings = c("", " ", "NA", "Na", "na"))
+      lapply(csv_file_list, read.csv, ..., na.strings = c("", " ", "NA", "Na", "na"))
     if (rows_to_import == "all" && cols_to_import == "all") {
       for (i in 1:length(csv_file_list)) {
         data_tables[[i]] <- data_tables[[i]][]
