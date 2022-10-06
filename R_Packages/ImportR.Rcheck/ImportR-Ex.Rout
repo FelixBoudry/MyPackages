@@ -1,5 +1,5 @@
 
-R version 4.2.0 (2022-04-22 ucrt) -- "Vigorous Calisthenics"
+R version 4.2.1 (2022-06-23 ucrt) -- "Funny-Looking Kid"
 Copyright (C) 2022 The R Foundation for Statistical Computing
 Platform: x86_64-w64-mingw32/x64 (64-bit)
 
@@ -82,7 +82,7 @@ Type 'q()' to quit R.
 > cleanEx()
 > options(digits = 7L)
 > base::cat("Time elapsed: ", proc.time() - base::get("ptime", pos = 'CheckExEnv'),"\n")
-Time elapsed:  0.27 0.02 1.04 NA NA 
+Time elapsed:  0.3 0.04 1.08 NA NA 
 > grDevices::dev.off()
 null device 
           1 

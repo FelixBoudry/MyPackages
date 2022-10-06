@@ -26,7 +26,7 @@ import_xlsx_folder <-
     csv_file_list <-
       list.files(path = data_path,
                  full.names = TRUE)
-    data_tables <- lapply(csv_file_list, read_excel, na = c("", " ", "NA", "Na", "na"), ...)
+    data_tables <- lapply(csv_file_list, read_excel, ...)
     if (rows_to_import == "all" && cols_to_import == "all") {
       for (i in 1:length(csv_file_list)) {
         data_tables[[i]] <- data_tables[[i]][] %>%

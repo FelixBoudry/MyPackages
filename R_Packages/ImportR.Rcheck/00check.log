@@ -1,11 +1,11 @@
 * using log directory 'C:/Users/felix/Git/Packages/R_Packages/ImportR.Rcheck'
-* using R version 4.2.0 (2022-04-22 ucrt)
+* using R version 4.2.1 (2022-06-23 ucrt)
 * using platform: x86_64-w64-mingw32 (64-bit)
 * using session charset: UTF-8
 * using options '--no-manual --as-cran'
 * checking for file 'ImportR/DESCRIPTION' ... OK
 * checking extension type ... Package
-* this is package 'ImportR' version '0.1.1'
+* this is package 'ImportR' version '0.1.2'
 * package encoding: UTF-8
 * checking package namespace information ... OK
 * checking package dependencies ... OK
